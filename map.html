@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+
+      /* Always set the map height explicitly to define the size of the div element that contains the map. */
+      #map {
+        height: 90%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 90%;
+        margin: 0;
+        padding: 0;
+        background-color: #f2c3c6;
+      }
+
+    </style>
+  </head>
+  <body>
+    <img src="mapsNav.jpg" alt="" width="100%">
+    <div id="map"></div>
+    <!-- Replace the value of the key parameter with your own API key. -->
+
+    <script>
+
+    // This example displays a marker at the center of Australia.
+    // When the user clicks the marker, an info window opens.
+    // The maximum width of the info window is set to 200 pixels.
+
+    function initMap() {
+      var leilah = {lat: 42.3584308, lng: -71.0597732};
+      var barry = {lat: 42.375, lng: -71.1061111};
+      var gris = {lat: 42.3467, lng: -71.0972};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: leilah
+      });
+
+      // creates data that will later be put in the info windows
+
+      var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Leilah</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Leilah</b> is a 3 year old dog (Female) that is good with children, ' +
+      'has medium energy, does not like the outdoors, is hypoallergenic, has no '+
+      'history of agression, and is generally and house trained.</p>'+
+      '</div>'+
+      '</div>';
+
+      var catString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Barry</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Barry</b> is a 5 year old cat (Female) that is good with children, ' +
+      'has high energy, likes the outdoors, is not hypoallergenic, has no '+
+      'history of agression, and is generally trained (but not house trained).</p>'+
+      '</div>'+
+      '</div>';
+
+      var grisString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Gris</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Gris</b> is a 1 year old dog (Male) that is not good with children, ' +
+      'has medium energy, likes the outdoors, is not hypoallergenic, has a '+
+      'history of agression, and is generally trained (but not house trained).</p>'+
+      '</div>'+
+      '</div>';
+
+      // sets the data from ^ into the specific info window
+
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 200
+      });
+      var catwindow = new google.maps.InfoWindow({
+        content: catString,
+        maxWidth: 200
+      });
+      var griswindow = new google.maps.InfoWindow({
+        content: grisString,
+        maxWidth: 200
+      });
+
+      // creates the icons of markers and sets their location
+
+      var marker = new google.maps.Marker({
+        position: leilah,
+        map: map,
+        title: 'Leilah (Dog, Female)'
+      });
+      // add functionality to marker, click for info
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+
+      var marker2 = new google.maps.Marker({
+        position: barry,
+        map: map,
+        title: 'Barry (Cat, Female)'
+      });
+      // add functionality to marker, click for info
+      marker2.addListener('click', function() {
+        catwindow.open(map, marker2);
+      });
+
+      var marker3 = new google.maps.Marker({
+        position: gris,
+        map: map,
+        title: 'Gris (Dog, Male)'
+      });
+      // add functionality to marker, click for info
+      marker3.addListener('click', function() {
+        griswindow.open(map, marker3);
+      });
+    }
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLFk7yLmoLAu7N6HGnhWQedjHyssXESDk&callback=initMap">
+    </script>
+  </body>
+</html>
