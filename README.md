@@ -1,6 +1,8 @@
 # PetMatch - Hackathon Project for TechTogether Boston 2020
 By: Samarah Uriarte, Natalie Starczewski, Eva Lynch, and Amelia Fordyce
 
+Note: To view online, visit https://ttboston20.appspot.com/landing.html
+
 Built With:
 1. Amazon Rekognition, Amazon Web Services 
 2. Bootstrap, CSS, HTML5 
