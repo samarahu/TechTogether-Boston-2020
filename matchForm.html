@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Match Form</title>
+  </head>
+
+  <body>
+
+    <h1> Match User Data Entry Form </h1>
+
+    <form action="matchForm.php" method="post">
+
+
+      <!-- source: https://www.w3schools.com/html/html_form_elements.asp -->
+      Type of pet:<br/>
+      <select id="type" name="type" class="form-control">
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+      </select><br/><br/>
+
+      What are you looking for in a pet? Check all that apply.<br/><br/>
+
+      <!-- source: https://stackoverflow.com/questions/28543752/multiple-radio-button-groups-in-one-form -->
+      Hypoallergenic
+      <input type="radio" name="hypoallergenic" value="TRUE"> Yes
+      <input type="radio" name="hypoallergenic" value="FALSE"> No<br/><br/>
+
+      Child-Friendly
+      <input type="radio" name="children" value="TRUE"> Yes
+      <input type="radio" name="children" value="FALSE"> No<br/><br/>
+
+      Outdoor-Friendly
+      <input type="radio" name="likesOutdoors" value="TRUE"> Yes
+      <input type="radio" name="likesOutdoors" value="FALSE"> No<br/><br/>
+
+      House Trained
+      <input type="radio" name="houseTrained" value="TRUE"> Yes
+      <input type="radio" name="houseTrained" value="FALSE"> No<br/><br/>
+
+      Behavior-trained?
+      <input type="radio" name="trained" value="TRUE"> Yes
+      <input type="radio" name="trained" value="FALSE"> No<br/><br/>
+
+      <!-- source: https://www.w3schools.com/html/html_form_elements.asp -->
+      Energy level:<br/>
+      <select id="energy" name="energy" class="form-control">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select><br/><br/>
+
+      <!-- source: https://www.w3schools.com/html/html_form_elements.asp -->
+      Location:<br/>
+      <select id="location" name="location" class="form-control">
+        <option value="Boston">Boston</option>
+        <option value="New York">New York</option>
+        <option value="Austin">Austin</option>
+        <option value="San Francisco">San Francisco</option>
+        <option value="Los Angeles">Los Angeles</option>
+      </select><br/><br/>
+
+      <br/><br/><br/>
+
+      <input type="submit" value="Submit">
+
+    </form>
+  </body>
+</html>
