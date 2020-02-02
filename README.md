@@ -1,6 +1,13 @@
 # PetMatch - Hackathon Project for TechTogether Boston 2020
 By: Samarah Uriarte, Natalie Starczewski, Eva Lynch, and Amelia Fordyce
 
+Built With:
+1. Amazon Rekognition, Amazon Web Services 
+2. Bootstrap, CSS, HTML5 
+3. Database 6. 
+4. Google App Engine, Google Cloud, Google Maps, Google Maps Javascript API 
+5. Java, Javascript, MySQL, PHP
+
 ## Inspiration
 While the group was brainstorming ideas for the hackathon, Samarah's passion for helping animals came up and she suggested to focus on developing a web application that allowed potential pet owners to find a new best pet friend with ease and efficiency. Eva, Natalie, and Amelia, all pet owners themselves, shared this love of dogs and cats. They decided to proceed with the PetMatch project to work towards solving the major problem of homeless animals and to promote pet ownership due to its various benefits. According to the ASPCA, 6.5 million animals enter U.S. animal shelters nationwide every year. This is a heartbreaking public issue, and the goal of our project is to support animals in finding their forever homes.
 
